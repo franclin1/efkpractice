@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: malteahlers
   name: java-app
   labels:
     app: java-app
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: nanajanashia/demo-app:java-1.0
+          image: franclin1/demo-app:java-1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

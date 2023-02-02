@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # creating secret for registry 
-password=$(cat dockerpassword.txt)
-user=$(cat dockeruser.txt)
-namespace=$(cat namespace.txt)
+password=$(cat ./creds/dockerpassword.txt)
+user=$(cat ./creds/dockeruser.txt)
+namespace=$(cat ./creds/namespace.txt)
 kubectl create secret docker-registry myregistrysecret --docker-server=docker.io --docker-username=$user --docker-password=$password -n $namespace
 
 # deploying apps

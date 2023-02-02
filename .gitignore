@@ -2,3 +2,6 @@ dockerpassword.txt
 dockeruser.txt
 namespace.txt
 .DS_Store
+deployefk.sh 
+/creds
+deleteefk.sh

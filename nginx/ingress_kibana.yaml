@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+annotations:
+
+metadata:
+  name: kibana-ingress
+  namespace: malteahlers
+spec:
+  rules:
+    - host: maltekibana.skyered-devops.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kibana-kibana
+                port:
+                  number: 5601
+  ingressClassName: nginx
+

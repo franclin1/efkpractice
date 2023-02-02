@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get namespace
-namespace=$(cat namespace.txt)
+namespace=$(cat ./creds/namespace.txt)
 # delete pull-secret
 kubectl delete secret/myregistrysecret -n $namespace
 
